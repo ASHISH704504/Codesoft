@@ -382,24 +382,78 @@ body {
         position: static;
         height: auto;
     }
+
+    .pro-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
+@media screen and (max-width:900px) {
+    .pro-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media screen and (max-width:750px) {
-    .project-container{
+    .main-container {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 24px;
+    }
+
+    .first_nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .red {
+        margin-left: 0;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .sidebar,
+    .main-content {
+        padding: 16px;
+    }
+
+    .resume div p {
+        text-align: center;
+    }
+
+    .grid-container {
         grid-template-columns: 1fr;
     }
 
-    #navigation nav {
-        /* Adjust nav for smaller screens */
-        justify-content: center;
-        flex-wrap: wrap;
+    .item img {
+        height: 40px;
+        width: 40px;
     }
 
-    .sidebar{
-        display: flex;
-        justify-content: center;
-        gap: 40px;
+    .profile img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .degree {
+        font-size: 1.05rem;
     }
 }
 
